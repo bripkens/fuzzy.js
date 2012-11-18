@@ -7,7 +7,11 @@
       queryLength = query.length,
       highlighting = '',
       ti = 0,
-      previousMatchingCharacter = Number.MIN_VALUE;
+      // -1 would not work as this would break the calculations of bonus
+      // points for subsequent character matches. Something like
+      // NUMBER.MIN_VALUE would be more appropriate, but unfortunately
+      // Number.MIN_VALUE + 1 equals 1...
+      previousMatchingCharacter = -2;
 
     for (var qi = 0; qi < queryLength && ti < termLength; qi++) {
       var qc = query.charAt(qi),
