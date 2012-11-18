@@ -6,7 +6,7 @@ fuzzy.js' algorithm is very lightweight and is aimed to provide an
 experience which you may know from editors such as Sublime Text 2,
 TextMate and others.
 
-Further information is available through https://bripkens.github.com/fuzzy.js.
+Further information is available through http://bripkens.github.com/fuzzy.js/.
 
 # License (MIT)
 
