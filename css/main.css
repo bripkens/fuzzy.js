@@ -1,0 +1,54 @@
+body {
+  margin: 20px;
+}
+
+p {
+  text-align: justify;
+}
+
+.fuzzy-search-wrapper {
+  width: 400px;
+  background: #eee;
+  border: 1px solid #bbb;
+  margin: 0 auto;
+}
+
+.fuzzy-search {
+  border-bottom: 1px solid #bbb;
+  padding: 6px;
+}
+
+.fuzzy-search input {
+  width: 92%;
+}
+
+.fuzzy-search-wrapper ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fuzzy-search-wrapper li {
+  border-top: 1px solid #bbb;
+  padding: 3px 10px;
+  cursor: pointer;
+  color: #666;
+}
+
+.fuzzy-search-wrapper li:hover {
+  background: #ddd;
+}
+
+.fuzzy-search-wrapper li:first-child {
+  border-top: 0;
+}
+
+.fuzzy-search-wrapper li.selected {
+  background: #ddd;
+}
+
+.fuzzy-search-wrapper li em {
+  color: #08c;
+  font-style: initial;
+  font-weight: bold;
+}
