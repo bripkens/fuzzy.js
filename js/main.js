@@ -1,13 +1,11 @@
 (function() {
   var options = [
-      'Inkassoart umstellen',
-      'Vergleichsangebot Leben',
-      'Vergleichsangebot KFZ',
-      'Vergleichsangebot Haus',
-      'PSSStatistik',
-      'Partner ändern',
-      'Kommunikationsmedien ändern',
-      'Umzug'
+      'Update payment method',
+      'See payment statistics',
+      'Shopping cart',
+      'Recently bought',
+      'Check out',
+      'Check in'
     ],
     maxResults = 5,
     input = document.querySelector('.fuzzy-search-wrapper input'),
