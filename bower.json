@@ -1,0 +1,25 @@
+{
+  "name": "fuzzy.js",
+  "main": "fuzzy.js",
+  "version": "0.0.2",
+  "homepage": "https://github.com/bripkens/fuzzy.js",
+  "authors": [
+    "Ben Ripkens <bripkens.dev@gmail.com>"
+  ],
+  "description": "Approximate (fuzzy) string matching just like you are used to from Sublime Text and others.",
+  "keywords": [
+    "fuzzy",
+    "string",
+    "matching",
+    "approximate",
+    "sublime"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

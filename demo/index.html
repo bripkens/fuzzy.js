@@ -52,8 +52,8 @@
       <pre>
 <code class='language-markup'>&lt;script type='text/javascript' src='js/fuzzy.js'&gt;&lt;/script&gt;
 &lt;script type='text/javascript'&gt;</code><code class='language-javascript'>
-  var query = 'majs',
-    term = 'main.js';
+  var query = 'majs';
+  var term = 'main.js';
 
   var match = fuzzy(term, query);
   console.log(match.score);            // 8
@@ -65,11 +65,41 @@
   var matches = [ ... ];
   matches.sort(fuzzy.matchComparator); // sorts descending</code>
 <code class='language-markup'>&lt;/script&gt;</code></pre>
+
+      <h2>Configuration options</h2>
+      <pre>
+<code class='language-markup'>&lt;script type='text/javascript' src='js/fuzzy.js'&gt;&lt;/script&gt;
+&lt;script type='text/javascript'&gt;</code><code class='language-javascript'>
+  // change the character sequences that are used to highlight matches
+  fuzzy.highlighting.before = '&lt;';
+  fuzzy.highlighting.after = '&gt;';
+
+  // enable sub term matches. See beflow for an example
+  fuzzy.analyzeSubTerms = true;
+
+  var query = 'Halleluja',
+  var term = 'luja';
+
+  var match = fuzzy(term, query);
+  console.log(match.score);            // 10
+  console.log(match.query);            // 'luja'
+  console.log(match.term);             // 'Halleluja'
+  console.log(match.highlightedTerm);  // 'Halle&lt;l&gt;&lt;u&gt;&lt;j&gt;&lt;a&gt;'
+
+  // now let us check this out without sub term matches
+  fuzzy.analyzeSubTerms = false;
+  match = fuzzy(term, query);
+  console.log(match.score);            // 8
+  console.log(match.query);            // 'luja'
+  console.log(match.term);             // 'Halleluja'
+  console.log(match.highlightedTerm);  // 'Ha&lt;l&gt;lel&lt;u&gt;&lt;j&gt;&lt;a&gt;'</code>
+<code class='language-markup'>&lt;/script&gt;</code></pre>
+
     </div>
 
     <a href="https://github.com/bripkens/fuzzy.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
-    <script type='text/javascript' src='js/fuzzy.js'></script>
+    <script type='text/javascript' src='../fuzzy.js'></script>
     <script type='text/javascript' src='js/prism.js'></script>
     <script type='text/javascript' src='js/main.js'></script>
   </body>

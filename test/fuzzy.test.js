@@ -1,7 +1,13 @@
 var assert = require("assert"),
-  fuzzy = require("../js/fuzzy.js");
+  fuzzy = require("../fuzzy.js");
 
 describe('fuzzy', function(){
+  before(function() {
+    fuzzy.analyzeSubTerms = false;
+    fuzzy.highlighting.before = '<';
+    fuzzy.highlighting.after = '>';
+  });
+
   describe('#match', function(){
     it('should return 0 when no character matches', function(){
       assert.equal(0, fuzzy('main.js', 'foo').score);
@@ -36,7 +42,32 @@ describe('fuzzy', function(){
       var match = fuzzy('software', 'wae');
 
       assert.equal(match.highlightedTerm,
-        'soft<em>w</em><em>a</em>r<em>e</em>');
+        'soft<w><a>r<e>');
+    });
+
+    describe('subTermAnalysis', function() {
+      before(function() {
+        fuzzy.analyzeSubTerms = true;
+      });
+
+      it('should find best sub term match', function() {
+        var term = 'Halleluja';
+        var query = 'luja';
+        var match = fuzzy(term, query);
+        assert.equal(10, match.score);
+        assert.equal('Halle<l><u><j><a>', 
+            match.highlightedTerm);
+      });
+
+      it('should stop at sub term depth', function() {
+        fuzzy.analyzeSubTerms = true;
+        var term = '-----------Hel--Hello';
+        var query = 'Hello';
+        var match = fuzzy(term, query);
+        assert.equal(9, match.score);
+        
+        assert.equal('-----------<H><e><l>--He<l>l<o>', match.highlightedTerm);
+      });
     });
   });
 

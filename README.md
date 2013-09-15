@@ -8,6 +8,16 @@ TextMate and others.
 
 Further information is available through http://bripkens.github.com/fuzzy.js/.
 
+# Installation
+
+You can install fuzzy.js using NPM and Bower just as you would expect:
+
+```
+npm install fuzzy.js
+
+bower install fuzzy.js
+```
+
 # License (MIT)
 
 Copyright (c) 2012 Ben Ripkens

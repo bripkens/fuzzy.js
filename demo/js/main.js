@@ -1,4 +1,6 @@
 (function() {
+  fuzzy.analyzeSubTerms = true;
+
   var options = [
       'Update payment method',
       'See payment statistics',
