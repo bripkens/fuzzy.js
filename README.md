@@ -6,16 +6,31 @@ fuzzy.js' algorithm is very lightweight and is aimed to provide an
 experience which you may know from editors such as Sublime Text 2,
 TextMate and others.
 
-Further information is available through http://bripkens.github.com/fuzzy.js/.
+**Demo: http://bripkens.github.com/fuzzy.js/demo**
 
 # Installation
 
-You can install fuzzy.js using NPM and Bower just as you would expect:
+ - Either download the [developer](https://raw.github.com/bripkens/fuzzy.js/master/fuzzy.js)
+   or the [minified](https://raw.github.com/bripkens/fuzzy.js/master/fuzzy.min.js)
+   version of fuzzy.js and include it in your HTML file.
+ - NPM users can `npm install fuzzy.js`
+ - Bower users can `bower install fuzzy.js`.
+
+# Usage
 
 ```
-npm install fuzzy.js
+var query = 'majs';
+var term = 'main.js';
 
-bower install fuzzy.js
+var match = fuzzy(term, query);
+console.log(match.score);            // 8
+console.log(match.query);            // 'majs'
+console.log(match.term);             // 'main.js'
+console.log(match.highlightedTerm);  // '<em>m</em><em>a</em>in.<em>j</em><em>s</em>'
+
+// sorting an array of matches
+var matches = [ ... ];
+matches.sort(fuzzy.matchComparator); // sorts descending
 ```
 
 # License (MIT)
