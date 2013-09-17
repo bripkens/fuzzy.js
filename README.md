@@ -1,5 +1,9 @@
 # fuzzy.js [![Build Status](https://secure.travis-ci.org/bripkens/fuzzy.js.png)](https://secure.travis-ci.org/#!/bripkens/fuzzy.js)
 
+<img src="http://benschwarz.github.io/bower-badges/badge@2x.png" width="130" height="30">
+
+[![NPM version](https://badge.fury.io/js/fuzzy.js.png)](http://badge.fury.io/js/fuzzy.js)
+
 Fuzzy.js is a tiny library for approximate (fuzzy) string matching. In
 contrast to other algorithms like the Levenshtein Distance,
 fuzzy.js' algorithm is very lightweight and is aimed to provide an
