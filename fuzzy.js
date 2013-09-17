@@ -1,3 +1,8 @@
+/*
+ fuzzy.js v0.0.2
+ (c) 2013 Ben Ripkens
+ License: MIT
+*/
 (function (context) {
   'use strict';
 
