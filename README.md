@@ -1,6 +1,6 @@
 # fuzzy.js [![Build Status](https://secure.travis-ci.org/bripkens/fuzzy.js.png)](https://secure.travis-ci.org/#!/bripkens/fuzzy.js) [![NPM version](https://badge.fury.io/js/fuzzy.js.png)](http://badge.fury.io/js/fuzzy.js) <img src="http://benschwarz.github.io/bower-badges/badge@2x.png" width="130" height="30">
 
-Fuzzy.js is a tiny library for approximate (fuzzy) string matching. 
+Fuzzy.js is a library for approximate (fuzzy) string matching. 
 Fuzzy.js is aimed at providing an
 experience which you may know from editors such as Sublime Text,
 Atom, TextMate and others.
