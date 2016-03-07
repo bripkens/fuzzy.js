@@ -9,8 +9,8 @@ Atom, TextMate and others.
 
 ## Installation
 
- - Either download the [developer](https://raw.github.com/bripkens/fuzzy.js/master/fuzzy.js)
-   or the [minified](https://raw.github.com/bripkens/fuzzy.js/master/fuzzy.min.js)
+ - Either download the [developer](https://raw.github.com/bripkens/fuzzy.js/gh-pages/fuzzy.js)
+   or the [minified](https://raw.github.com/bripkens/fuzzy.js/gh-pages/fuzzy.min.js)
    version of fuzzy.js and include it in your HTML file.
  - NPM users can `npm install fuzzy.js`
 
