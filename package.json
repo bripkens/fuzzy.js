@@ -3,11 +3,14 @@
   "version": "0.0.2",
   "description": "Approximate (fuzzy) string matching just like you are used to from Sublime Text and others.",
   "main": "fuzzy.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "compress": "uglifyjs fuzzy.js --comments > fuzzy.min.js"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test && npm run compress && git add fuzzy.min.js"
+    }
   },
   "repository": {
     "type": "git",
@@ -24,8 +27,9 @@
   ],
   "author": "Ben Ripkens <bripkens.dev@gmail.com>",
   "license": "MIT",
-  "readmeFilename": "README.md",
   "devDependencies": {
-    "mocha": "2.4.5"
+    "ghooks": "1.0.3",
+    "mocha": "2.4.5",
+    "uglify-js": "2.6.2"
   }
 }

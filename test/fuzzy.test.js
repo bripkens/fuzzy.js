@@ -1,5 +1,5 @@
-var assert = require("assert"),
-  fuzzy = require("../fuzzy.js");
+var assert = require("assert");
+var fuzzy = require("../fuzzy.js");
 
 describe('fuzzy', function(){
   before(function() {

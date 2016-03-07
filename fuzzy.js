@@ -1,8 +1,8 @@
-/*
- fuzzy.js v0.0.2
- (c) 2013 Ben Ripkens
- License: MIT
-*/
+/**
+ * fuzzy.js v0.0.2
+ * (c) 2016 Ben Ripkens
+ * @license: MIT
+ */
 (function (context) {
   'use strict';
 
