@@ -1,22 +1,20 @@
-# fuzzy.js [![Build Status](https://secure.travis-ci.org/bripkens/fuzzy.js.png)](https://secure.travis-ci.org/#!/bripkens/fuzzy.js) [![NPM version](https://badge.fury.io/js/fuzzy.js.png)](http://badge.fury.io/js/fuzzy.js) <img src="http://benschwarz.github.io/bower-badges/badge@2x.png" width="130" height="30">
+# fuzzy.js [![Build Status](https://secure.travis-ci.org/bripkens/fuzzy.js.png)](https://secure.travis-ci.org/#!/bripkens/fuzzy.js) [![NPM version](https://badge.fury.io/js/fuzzy.js.png)](http://badge.fury.io/js/fuzzy.js)
 
-Fuzzy.js is a tiny library for approximate (fuzzy) string matching. In
-contrast to other algorithms like the Levenshtein Distance,
-fuzzy.js' algorithm is very lightweight and is aimed to provide an
-experience which you may know from editors such as Sublime Text 2,
-TextMate and others.
+Fuzzy.js is a library for approximate (fuzzy) string matching.
+Fuzzy.js is aimed at providing an
+experience which you may know from editors such as Sublime Text,
+Atom, TextMate and others.
 
 **Demo: http://bripkens.github.com/fuzzy.js/demo**
 
-# Installation
+## Installation
 
  - Either download the [developer](https://raw.github.com/bripkens/fuzzy.js/master/fuzzy.js)
    or the [minified](https://raw.github.com/bripkens/fuzzy.js/master/fuzzy.min.js)
    version of fuzzy.js and include it in your HTML file.
  - NPM users can `npm install fuzzy.js`
- - Bower users can `bower install fuzzy.js`.
 
-# Usage
+## Usage
 
 ```
 var query = 'majs';
@@ -33,9 +31,9 @@ var matches = [ ... ];
 matches.sort(fuzzy.matchComparator); // sorts descending
 ```
 
-# License (MIT)
+## License (MIT)
 
-Copyright (c) 2012 Ben Ripkens
+Copyright (c) 2016 Ben Ripkens
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

@@ -1,8 +1,8 @@
-/*
- fuzzy.js v0.0.2
- (c) 2013 Ben Ripkens
- License: MIT
-*/
+/**
+ * fuzzy.js v0.0.2
+ * (c) 2016 Ben Ripkens
+ * @license: MIT
+ */
 (function (context) {
   'use strict';
 
@@ -78,7 +78,7 @@
   };
 
   fuzzy.matchComparator = function matchComparator(m1, m2) {
-    return m2.score - m1.score;
+    return (m2.score - m1.score != 0) ? m2.score - m1.score : m1.term.length - m2.term.length;
   };
 
   /*

@@ -1,5 +1,5 @@
-var assert = require("assert"),
-  fuzzy = require("../fuzzy.js");
+var assert = require("assert");
+var fuzzy = require("../fuzzy.js");
 
 describe('fuzzy', function(){
   before(function() {
@@ -55,7 +55,7 @@ describe('fuzzy', function(){
         var query = 'luja';
         var match = fuzzy(term, query);
         assert.equal(10, match.score);
-        assert.equal('Halle<l><u><j><a>', 
+        assert.equal('Halle<l><u><j><a>',
             match.highlightedTerm);
       });
 
@@ -65,7 +65,7 @@ describe('fuzzy', function(){
         var query = 'Hello';
         var match = fuzzy(term, query);
         assert.equal(9, match.score);
-        
+
         assert.equal('-----------<H><e><l>--He<l>l<o>', match.highlightedTerm);
       });
     });
@@ -73,15 +73,26 @@ describe('fuzzy', function(){
 
   describe('#matchComparator', function() {
     it('should sort fuzzy matches', function() {
-      var match0 = { score: 1 },
-        match1 = { score: 0 },
-        match2 = { score: 5 },
-        match3 = { score: 2 },
-        matches = [match0, match1, match2, match3];
+      var match0 = { score: 1 };
+      var match1 = { score: 0 };
+      var match2 = { score: 5 };
+      var match3 = { score: 2 };
+      var matches = [match0, match1, match2, match3];
 
       matches.sort(fuzzy.matchComparator);
 
       assert.deepEqual([match2, match3, match0, match1], matches);
+    });
+
+    it('should sort matches with equal scores according to term length', function() {
+      var match0 = { score: 1, term: 'cardealer' };
+      var match1 = { score: 1, term: 'car' };
+      var match2 = { score: 1, term: 'carpark' };
+      var matches = [match0, match1, match2];
+
+      matches.sort(fuzzy.matchComparator);
+
+      assert.deepEqual([match1, match2, match0], matches);
     });
   });
 });
