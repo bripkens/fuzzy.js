@@ -1,5 +1,5 @@
 /**
- * fuzzy.js v0.0.2
+ * fuzzy.js v0.1.0
  * (c) 2016 Ben Ripkens
  * @license: MIT
  */
