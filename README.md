@@ -1,4 +1,4 @@
-# fuzzy.js [![Build Status](https://secure.travis-ci.org/bripkens/fuzzy.js.png)](https://secure.travis-ci.org/#!/bripkens/fuzzy.js) [![NPM version](https://badge.fury.io/js/fuzzy.js.png)](http://badge.fury.io/js/fuzzy.js)
+# fuzzy.js [![Build Status](https://travis-ci.org/bripkens/fuzzy.js.svg?branch=gh-pages)](https://travis-ci.org/bripkens/fuzzy.js) [![NPM version](https://badge.fury.io/js/fuzzy.js.png)](http://badge.fury.io/js/fuzzy.js)
 
 Fuzzy.js is a library for approximate (fuzzy) string matching.
 Fuzzy.js is aimed at providing an
