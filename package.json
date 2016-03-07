@@ -1,6 +1,6 @@
 {
   "name": "fuzzy.js",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Approximate (fuzzy) string matching just like you are used to from Sublime Text and others.",
   "main": "fuzzy.js",
   "scripts": {
