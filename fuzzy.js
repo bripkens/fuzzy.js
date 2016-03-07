@@ -78,7 +78,7 @@
   };
 
   fuzzy.matchComparator = function matchComparator(m1, m2) {
-    return m2.score - m1.score;
+    return (m2.score - m1.score != 0) ? m2.score - m1.score : m1.term.length - m2.term.length;
   };
 
   /*
