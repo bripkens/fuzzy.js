@@ -5,7 +5,7 @@ Fuzzy.js is aimed at providing an
 experience which you may know from editors such as Sublime Text,
 Atom, TextMate and others.
 
-**Demo: http://bripkens.github.com/fuzzy.js/demo**
+**Demo: https://bripkens.github.io/fuzzy.js/demo/**
 
 ## Installation
 
